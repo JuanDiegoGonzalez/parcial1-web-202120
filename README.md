@@ -18,7 +18,7 @@
 
 ## Documentación endpoint
 
-El endpoint creado consulta la lista de jugadores, y encuentra las parejas cuya altura sume el valor indicado por el query. 
+El endpoint creado consulta la lista de jugadores y encuentra las parejas cuya altura sume el valor indicado por el query. 
 La url del endpoint es: http://localhost:3000/api?input=X , donde "X" se puede reemplazar por cualquier valor numerico a buscar.
 
 Si no se encuentran parejas que cumplan la condicion, se devuelve el objeto: [{"message":"No matches found"}]
