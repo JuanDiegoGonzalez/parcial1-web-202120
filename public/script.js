@@ -18,9 +18,11 @@ async function getresults(heightRef) {
   const resp = await fetch(`api?input=${heightRef}`);
   const data = await resp.json();
 
-  renderizarRepuesta(data);
-  if (data.length === 0) {
-    alert("No matches found");
+  if (data[0].hasOwnProperty("message")) {
+    alert(data[0].message);
+    renderizarRepuesta([]);
+  } else {
+    renderizarRepuesta(data);
   }
 }
 

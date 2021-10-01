@@ -31,8 +31,11 @@ const getPairsOfPlayers = async (req = request, resp = response, next) => {
     }
   }
 
-  resp.json(respuesta);
-  //return resp.json({ message: "To be implemented" });
+  if (respuesta.length === 0) {
+    return resp.json([{ message: "No matches found" }]);
+  } else {
+    resp.json(respuesta);
+  }
 };
 
 module.exports = { getPairsOfPlayers };
